@@ -1,6 +1,6 @@
 <?php
 
-class Reservations
+class Reservation
 {
     private Client $_client;
     private DateTime $_entree;
@@ -12,9 +12,11 @@ class Reservations
 public function __construct(Client $client, DateTime $entree, DateTime $sortie, Chambre $chambre, int $prix)
 {
     $this->_client = $client;
+    $this->_client->addReservation($this);
     $this->_entree = $entree;
     $this->_sortie = $sortie;
     $this->_chambre = $chambre;
+    $this->_chambre->addReservation($this);
     $this->_prix = $prix;
 }
 
