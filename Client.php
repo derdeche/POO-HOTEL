@@ -29,3 +29,8 @@ public function addReservations(array $reservation)
     $this->reservations[] = $reservation;
 }
 
+public function __toString()
+{
+    return $this->getNom()." ".$this->getPrenom();
+}
+
