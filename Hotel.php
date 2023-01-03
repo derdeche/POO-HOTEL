@@ -9,9 +9,9 @@ class Hotel
     private int $nbChambre;
     private int $chReservees;
     private int $chDispo;
-}
 
-public function __construct($nom, $adresse, $ville, $etoiles, $nbChambre, $chReservees, $chDispo)
+
+public function __construct(string $nom, string $adresse, string $ville, string $etoiles, int $nbChambre, int $chReservees, int $chDispo)
 {
     $this->nom = $nom;
     $this->adresse = $adresse;
@@ -54,7 +54,7 @@ public function getNbChambre()
 
 public function getChReservees()
 {
-    return $this->chaReservees;
+    return $this->chReservees;
 }
 
 
@@ -66,10 +66,27 @@ public function getChDispo()
 public function __toString()
 {
     echo $this->getNom()." ".$this->getEtoiles()." ".$this->getVille()."<br>";
-    $this->getAdress()." ".$this->getVille()."<br>";
+    echo $this->getAdresse()." ".$this->getVille()."<br>";
     echo "Nombre de chambres : ".$this->getNbChambre()."<br>";
-    echo "Nombre de chambres réservées : ".$this->getChReservees."<br>";
-    echo "Nombre de chambres dispo : ".$this->getChDispo;
-
+    echo "Nombre de chambres réservées : ".$this->getChReservees()."<br>";
+    echo "Nombre de chambres dispo : ".$this->getChDispo()."<br>";
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
