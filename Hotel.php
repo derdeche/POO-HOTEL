@@ -2,65 +2,65 @@
 
 class Hotel
 {
-    private string $nom;
-    private string $adresse;
-    private string $ville;
-    private string $etoiles;
-    private int $nbChambre;
-    private int $chReservees;
-    private int $chDispo;
+    private string $_nom;
+    private string $_adresse;
+    private string $_ville;
+    private string $_etoiles;
+    private int $_nbChambre;
+    private int $_chReservees;
+    private int $_chDispo;
 
 
 public function __construct(string $nom, string $adresse, string $ville, string $etoiles, int $nbChambre, int $chReservees, int $chDispo)
 {
-    $this->nom = $nom;
-    $this->adresse = $adresse;
-    $this->ville = $ville;
-    $this->etoiles = $etoiles;
-    $this->nbChambre = $nbChambre;
-    $this->chReservees = $chReservees;
-    $this->chDispo = $chDispo;
+    $this->_nom = $nom;
+    $this->_adresse = $adresse;
+    $this->_ville = $ville;
+    $this->_etoiles = $etoiles;
+    $this->_nbChambre = $nbChambre;
+    $this->_chReservees = $chReservees;
+    $this->_chDispo = $chDispo;
 }
 
 public function getNom()
 {
-    return $this->nom;
+    return $this->_nom;
 }
 
 
 public function getAdresse()
 {
-    return $this->adresse;
+    return $this->_adresse;
 }
 
 
 public function getVille()
 {
-    return $this->ville;
+    return $this->_ville;
 }
 
 
 public function getEtoiles()
 {
-    return $this->etoiles;
+    return $this->_etoiles;
 }
 
 
 public function getNbChambre()
 {
-    return $this->nbChambre;
+    return $this->_nbChambre;
 }
 
 
 public function getChReservees()
 {
-    return $this->chReservees;
+    return $this->_chReservees;
 }
 
 
 public function getChDispo()
 {
-    return $this->chDispo;
+    return $this->_chDispo;
 }
 
 public function __toString()
