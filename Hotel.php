@@ -65,11 +65,7 @@ public function getChDispo()
 
 public function __toString()
 {
-    echo $this->getNom()." ".$this->getEtoiles()." ".$this->getVille()."<br>";
-    echo $this->getAdresse()." ".$this->getVille()."<br>";
-    echo "Nombre de chambres : ".$this->getNbChambre()."<br>";
-    echo "Nombre de chambres réservées : ".$this->getChReservees()."<br>";
-    echo "Nombre de chambres dispo : ".$this->getChDispo()."<br>";
+    return  $this->getNom()." ".$this->getEtoiles()." ".$this->getVille()."<br>". $this->getAdresse()." ".$this->getVille()."<br>"."Nombre de chambres : ".$this->getNbChambre()."<br>"."Nombre de chambres réservées : ".$this->getChReservees()."<br>"."Nombre de chambres dispo : ".$this->getChDispo()."<br>";
 }
 
 
