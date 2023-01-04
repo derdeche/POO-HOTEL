@@ -5,11 +5,11 @@ class Chambre
     private Hotel $_hotel;
     private int $_numChambre;
     private int $_prix;
-    private bool $_wifi;
+    private string $_wifi;
     private string $_etat;
 
 
-public function __construct(Hotel $hotel, int $numChambre, int $prix, bool $wifi, string $etat)
+public function __construct(Hotel $hotel, int $numChambre, int $prix, string $wifi, string $etat)
 {
     $this->_hotel = $hotel;
     $this->_numChambre = $numChambre;
@@ -47,7 +47,7 @@ public function getEtat()
         /*Affichage info Chambre*/
 public function __toString()
 {
-    return $this->getHotel().$this->getNumChambre().$this->getPrix().$this->getWifi().$this->getEtat()."<br>";
+    return $this->getHotel()."Numéro de la chambre : ".$this->getNumChambre()."<br> " ."Tarif par Nuit: ".$this->getPrix()."<br>"."Wifi : ".$this->getWifi()."<br>"."Etat : ". $this->getEtat()."<br>";
 }
 
 }
