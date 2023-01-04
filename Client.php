@@ -5,7 +5,7 @@ class Client
     private string $_nom;
     private string $_prenom;
     private array $_reservations;
-}
+
 
 public function __construct(string $nom, string $prenom, array $reservations)
 {
@@ -36,4 +36,4 @@ public function __toString()
 {
     return $this->getNom()." ".$this->getPrenom();
 }
-
+}
