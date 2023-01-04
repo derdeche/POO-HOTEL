@@ -64,14 +64,17 @@ public function getChDispo()
 }
             /*Affichage info Hotel*/
             
-public function __toString()
+
+public function afficherHotel()
 {
-    return  $this->getNom()." ".$this->getEtoiles()." ".$this->getVille()."<br>". $this->getAdresse()." ".$this->getVille()."<br>"."Nombre de chambres : ".$this->getNbChambre()."<br>"."Nombre de chambres réservées : ".$this->getChReservees()."<br>"."Nombre de chambres dispo : ".$this->getChDispo()."<br>";
+    echo "L'hotel"." ".$this->getNom()." ".$this->getEtoiles()." ".$this->getVille()."<br>". $this->getAdresse()." ".$this->getVille()."<br>"."Nombre de chambres : ".$this->getNbChambre()."<br>"."Nombre de chambres réservées : ".$this->getChReservees()."<br>"."Nombre de chambres dispo : ".$this->getChDispo()."<br>";
 }
 
 
-
-
+public function __toString()
+{
+    return  $this->getNom()." ".$this->getEtoiles()." ".$this->getVille()."<br>";
+}
 
 
 
