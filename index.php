@@ -11,6 +11,8 @@ $hotel1 = new Hotel ('Hilton', '10 route de la Gare', 'Strasbourg','****', 40, 1
 $hotel2 = new hotel ('Le Régent','61 Rue Dauphine','Paris','***', 30, 10, 20);
 $client1 = new Client('Virgile', 'GIBELLO');
 $client2 = new Client('Micka', 'MURMANN');
+$reservation1 = new Reservation('$client1', '01-01-2021','03-01-2021');
+$reservation2 = new Reservation('$client2', '04-01-2021','06-01-2021');
 $hotel1->afficherHotel();
 
 echo "********************************"."<br>";
