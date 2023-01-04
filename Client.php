@@ -7,7 +7,7 @@ class Client
     private array $_reservations;
 
 
-public function __construct(string $nom, string $prenom, array $reservations)
+public function __construct(string $nom, string $prenom)
 {
     $this->_nom = $nom;
     $this->_prenom = $prenom;
@@ -24,7 +24,7 @@ public function getPrenom()
     return $this->_prenom;
 }
 
-public function addReservations(array $reservation)
+public function addReservation(array $reservation)
 {
     $this->reservations[] = $reservation;
 }
