@@ -4,7 +4,7 @@ class Client
 {
     private string $_nom;
     private string $_prenom;
-    private array $_reservations;
+    private array $_reservation;
 
 
 public function __construct(string $nom, string $prenom)
@@ -35,5 +35,16 @@ public function addReservation(array $reservation)
 public function __toString()
 {
     return $this->getNom()." ".$this->getPrenom();
+}
+
+public function afficherReservationClient()
+{
+    echo $this." ";
+
+    foreach ($this->_reservations as $reservation) 
+    {
+        echo $reservation."<br>";
+    
+    }
 }
 }
