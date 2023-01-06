@@ -14,10 +14,10 @@ $client1 = new Client('Virgile', 'GIBELLO');
 $client2 = new Client('Micka', 'MURMANN');
 
 $chambre1 = new Chambre($hotel1, 17, 120, 'Oui','Disponible');
-$chambre2 = new Chambre($hotel2, 3, 100, 'Oui','Disponible');
+$chambre2 = new Chambre($hotel1, 3, 100, 'Oui','Disponible');
 $chambre3 = new Chambre($hotel2, 4, 100, 'Non', 'Réservée');
 
-$reservation1 = new Reservation($client1, '2021-01-01','2021-01-03', $chambre1, 120);
+$reservation1 = new Reservation($client1, '01-01-2021','03-01-2021', $chambre1, 120);
 $reservation2 = new Reservation($client2, '04-01-2021','06-01-2021', $chambre2, 100);
 $reservation3 = new Reservation($client2, '08-04-2021','10-04-2021', $chambre3, 100);
 
@@ -33,5 +33,8 @@ echo $chambre3;
 echo "********************************"."<br>";
 
 //echo $reservation1;
+$client1->afficherReservationClient();
+//$hotel1->afficherReservationHotel();
+$reservation1->afficherReservationHotel();
 
 
