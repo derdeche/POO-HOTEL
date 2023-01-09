@@ -3,13 +3,13 @@
 class Reservation
 {
     private Client $_client;    
+    private Chambre $_chambre;
     private   $_entree;
     private   $_sortie;
-    private Chambre $_chambre;
    
 
 
-public function __construct(Client $client, $entree, $sortie, Chambre $chambre)
+public function __construct(Client $client,Chambre $chambre, $entree, $sortie)
 {
     $this->_client = $client;
     $this->_client->addReservation($this);
@@ -17,8 +17,7 @@ public function __construct(Client $client, $entree, $sortie, Chambre $chambre)
     $this->_sortie = new dateTime ($sortie);
     $this->_chambre = $chambre;
     $this->_chambre->getHotel()->addReservation($this);
-    
-    
+        
 }
 
 public function getClient()
