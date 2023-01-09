@@ -46,7 +46,7 @@ public function getChambre()
 
 public function __toString()
 {
-    return $this->_client->getNom()." ".$this->_client->getPrenom()."<br>".$this->_chambre."Date d'entrée : ".$this->getEntree()->format("d/m/y")."<br>"."Date de sortie : ".$this->getSortie()->format("d/m/y")."<br>";
+    return $this->_client->getNom()." ".$this->_client->getPrenom()."<br>".$this->_chambre." "." Du ".$this->getEntree()->format("d/m/y")." "."Au ".$this->getSortie()->format("d/m/y")."<br>";
 
 }
 
