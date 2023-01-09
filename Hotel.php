@@ -91,6 +91,7 @@ public function __toString()
     return  $this->getNom()." ".$this->getEtoiles()." ".$this->getVille()."<br>";
 }
 
+                                        /*AFFICHAGE DES RESERVATIOND D UN HOTEL*/
 public function afficherReservationHotel()
 {
     echo " Réservations de l'hotel ". $this;
