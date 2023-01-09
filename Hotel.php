@@ -9,8 +9,8 @@ class Hotel
     private int $_nbChambre;
     private int $_chReservees;
     private int $_chDispo;
-    private array $reservations;
-    private array $chambres;
+    private array $_reservations;
+    private array $_chambres;
 
 
 public function __construct(string $nom, string $adresse, string $ville, string $etoiles, int $nbChambre, int $chReservees, int $chDispo)
@@ -35,6 +35,7 @@ public function addChambre($chambre)
 {
     $this->_chambres[] = $chambre;
 }
+
 
 public function getNom()
 {
@@ -90,5 +91,18 @@ public function __toString()
     return  $this->getNom()." ".$this->getEtoiles()." ".$this->getVille()."<br>";
 }
 
+public function afficherReservationHotel()
+{
+    echo " Réservations de l'hotel ". $this;
+    foreach( $this->_reservations as $reservation)
+    {
+       echo $reservation;
+    }
 
- }
+}
+ 
+
+
+
+
+}
