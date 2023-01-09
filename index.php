@@ -15,7 +15,7 @@ $client2 = new Client('Micka', 'MURMANN');
 
 $chambre1 = new Chambre($hotel1, 17, 120, 'Oui','Disponible',3);
 $chambre2 = new Chambre($hotel1, 3, 100, 'Oui','Disponible',2);
-$chambre3 = new Chambre($hotel2, 4, 100, 'Non', 'Réservée',);
+$chambre3 = new Chambre($hotel2, 4, 100, 'Non', 'Réservée',2);
 
 $reservation1 = new Reservation($client1, '01-01-2021','03-01-2021', $chambre1);
 $reservation2 = new Reservation($client2, '04-01-2021','06-01-2021', $chambre2);
