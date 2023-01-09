@@ -31,8 +31,8 @@ echo$chambre2;
 echo "********************************"."<br>";
 echo $chambre3;
 echo "********************************"."<br>";
-
 echo $reservation1;
+echo "********************************"."<br>";
 //$client1->afficherReservationClient();
 //$hotel1->afficherReservationHotel();
 //$reservation1->afficherReservationHotel();
