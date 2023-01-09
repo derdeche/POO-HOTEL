@@ -5,6 +5,7 @@ class Client
     private string $_nom;
     private string $_prenom;
     private array $_reservation;
+    private array $_chambres;
 
 
 public function __construct(string $nom, string $prenom)
@@ -12,6 +13,7 @@ public function __construct(string $nom, string $prenom)
     $this->_nom = $nom;
     $this->_prenom = $prenom;
     $this->_reservations = [];
+    $this->_chambres = [];
 }
 
 public function getNom()
@@ -29,6 +31,11 @@ public function addReservation( $reservation)
     $this->reservations[] = $reservation;
 }
 
+public function addChambre($chambre)
+{
+    $this->_chambres[] = $chambre;
+}
+
             /*Affichage info Client*/ 
             
 
@@ -39,12 +46,13 @@ public function __toString()
 
 public function afficherReservationClient()
 {
-    echo $this." ";
+    echo "Réservations de :" .$this->getNom()." ".$this->getPrenom();
 
-    foreach ($this->_reservations as $reservation) 
-    {
-        echo $reservation."<br>";
     
+    foreach( $this->_reservations as $reservation)
+    {
+       
+       echo $reservation;
     }
 }
 }
