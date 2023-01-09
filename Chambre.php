@@ -58,7 +58,8 @@ public function getNbLit()
         /*Affichage info Chambre*/
 public function __toString()
 {
-    return $this->getHotel()."Numéro de la chambre : ".$this->getNumChambre()."<br> " ."Tarif par Nuit: ".$this->getPrix()."<br>"."Wifi : ".$this->getWifi()."<br>"."Etat : ". $this->getEtat()."<br>"." Nombre de lits :". $this->getNbLit()."<br>";
-}
+    return "Chambre : ".$this->getNumChambre();
 
+
+}
 }
