@@ -24,7 +24,7 @@ public function getPrenom()
     return $this->_prenom;
 }
 
-public function addReservation(array $reservation)
+public function addReservation( $reservation)
 {
     $this->reservations[] = $reservation;
 }
@@ -34,7 +34,7 @@ public function addReservation(array $reservation)
 
 public function __toString()
 {
-    return $this->getNom()." ".$this->getPrenom();
+    return $this->getNom()." ".$this->getPrenom().$this->_entree->getEntree();
 }
 
 public function afficherReservationClient()
