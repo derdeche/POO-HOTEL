@@ -4,18 +4,18 @@ class Chambre
 {
     private Hotel $_hotel;
     private int $_numChambre;
-    private int $_prix;
+    private int $_tarif;
     private string $_wifi;
     private string $_etat;
     private array $_reservations;
     private int $_nbLit; 
 
 
-public function __construct(hotel $hotel, int $numChambre, int $prix, string $wifi, string $etat,int $nbLit)
+public function __construct(hotel $hotel, int $numChambre, int $tarif, string $wifi, string $etat,int $nbLit)
 {
     $this->_hotel = $hotel;
     $this->_numChambre = $numChambre;
-    $this->_prix = $prix;
+    $this->_tarif = $tarif;
     $this->_wifi = $wifi;
     $this->_etat = $etat;
     $this->_nbLit = $nbLit;
@@ -35,9 +35,9 @@ public function getNumChambre()
 
 }
 
-public function getPrix()
+public function getTarif()
 {
-    return $this->_prix;
+    return $this->_tarif;
 }
 
 public function getWifi()
