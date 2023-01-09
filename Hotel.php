@@ -9,6 +9,8 @@ class Hotel
     private int $_nbChambre;
     private int $_chReservees;
     private int $_chDispo;
+    private array $reservations;
+    private array $chambres;
 
 
 public function __construct(string $nom, string $adresse, string $ville, string $etoiles, int $nbChambre, int $chReservees, int $chDispo)
@@ -20,6 +22,18 @@ public function __construct(string $nom, string $adresse, string $ville, string 
     $this->_nbChambre = $nbChambre;
     $this->_chReservees = $chReservees;
     $this->_chDispo = $chDispo;
+    $this->_reservations = [];
+    $this->_chambres = [];
+}
+
+public function addReservation( $reservation)
+{
+    $this->_reservations[] = $reservation;
+}
+
+public function addChambre($chambre)
+{
+    $this->_chambres[] = $chambre;
 }
 
 public function getNom()
@@ -77,16 +91,4 @@ public function __toString()
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-}
+ }
