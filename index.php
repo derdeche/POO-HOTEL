@@ -18,25 +18,26 @@ $chambre2 = new Chambre($hotel1, 3, 100, 'Oui','Disponible',2);
 $chambre3 = new Chambre($hotel2, 4, 100, 'Non', 'Réservée',2);
 
 $reservation1 = new Reservation($client1, $chambre1, '01-01-2021','03-01-2021');
-$reservation2 = new Reservation($client2,$chambre2, '04-01-2021','06-01-2021');
+$reservation2 = new Reservation($client1,$chambre2, '04-01-2021','06-01-2021');
 $reservation3 = new Reservation($client2, $chambre3,  '08-04-2021','10-04-2021');
 
 $hotel1->afficherHotel();
 echo "********************************"."<br>";
 $hotel2->afficherHotel();
 echo "********************************"."<br>";
-echo $chambre1;
-echo "********************************"."<br>";
-echo$chambre2;
-echo "********************************"."<br>";
-echo $chambre3;
-echo "********************************"."<br>";
-echo $reservation1;
-echo "********************************"."<br>";
+//echo $chambre1;
+//echo "********************************"."<br>";
+//echo$chambre2;
+//echo "********************************"."<br>";
+//echo $chambre3;
+//echo "********************************"."<br>";
+//echo $reservation1;
+//echo "********************************"."<br>";
 //$client1->afficherReservationClient();
-echo "********************************"."<br>";
+//echo "********************************"."<br>";
 $hotel1->afficherReservationHotel();
 //$reservation1->afficherReservationHotel();
 //echo $client1;
 //echo $client1;
+$reservation1->afficherReservation();
 
