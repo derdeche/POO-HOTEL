@@ -5,23 +5,17 @@ class Hotel
     private string $_nom;
     private string $_adresse;
     private string $_ville;
-    private string $_etoiles;
-    private int $_nbChambre;
-    private int $_chReservees;
-    private int $_chDispo;
+    private string $_etoiles;    
     private array $_reservations;
     private array $_chambres;
 
 
-public function __construct(string $nom, string $adresse, string $ville, string $etoiles, int $nbChambre, int $chReservees, int $chDispo)
+public function __construct(string $nom, string $adresse, string $ville, string $etoiles)
 {
     $this->_nom = $nom;
     $this->_adresse = $adresse;
     $this->_ville = $ville;
-    $this->_etoiles = $etoiles;
-    $this->_nbChambre = $nbChambre;
-    $this->_chReservees = $chReservees;
-    $this->_chDispo = $chDispo;
+    $this->_etoiles = $etoiles;    
     $this->_reservations = [];
     $this->_chambres = [];
 }
@@ -31,9 +25,19 @@ public function addReservation( $reservation)
     $this->_reservations[] = $reservation;
 }
 
+public function getReservations()
+{
+    return $this->_reservations;
+}
+
 public function addChambre($chambre)
 {
     $this->_chambres[] = $chambre;
+}
+
+public function getChambres()
+{
+    $this->_chambres [] = $chambre;
 }
 
 
@@ -61,34 +65,30 @@ public function getEtoiles()
 }
 
 
-public function getNbChambre()
-{
-    return $this->_nbChambre;
-}
 
-
-public function getChReservees()
-{
-    return $this->_chReservees;
-}
-
-
-public function getChDispo()
-{
-    return $this->_chDispo;
-}
-            /*Affichage info Hotel*/
+                                             /*Affichage info Hotel ET COORDONNEES*/
             
 
 public function afficherHotel()
 {
-    echo "L'hotel"." ".$this->getNom()." ".$this->getEtoiles()." ".$this->getVille()."<br>". $this->getAdresse()." ".$this->getVille()."<br>"."Nombre de chambres : ".$this->getNbChambre()."<br>"."Nombre de chambres réservées : ".$this->getChReservees()."<br>"."Nombre de chambres dispo : ".$this->getChDispo()."<br>";
+    echo "L'hotel"." ".$this->getNom()." ".$this->getEtoiles()." ".$this->getVille()."<br>". $this->getAdresse()." ".$this->getVille()."<br>";
 }
 
 
 public function __toString()
 {
     return  $this->getNom()." ".$this->getEtoiles()." ".$this->getVille()."<br>";
+}
+
+                                        /*AFFICHAGE INFO HOTEL ET CHAMBRE RESERVEES*/
+
+public function infoHotel()
+{
+    echo   "L'hotel " . $this->getNom() . " ".$this->getEtoiles()." ".$this->getVille()."<br>". $this->getAdresse()." ".$this->getVille()."<br>";
+    echo  "Nombre de Chambres : ".(count($this->_chambres))."<br>";
+    echo "chambres réservées : ".count($this->_reservations)."<br>";
+    echo "Chambres libres : ".(count($this->_chambres) - count($this->_reservations))."<br>";
+    
 }
 
                                         /*AFFICHAGE DES RESERVATIOND D UN HOTEL*/
@@ -101,6 +101,8 @@ public function afficherReservationHotel()
     }
 
 }
+
+
  
 
 
