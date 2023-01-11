@@ -4,7 +4,7 @@ class Client
 {
     private string $_nom;
     private string $_prenom;
-    private array $_reservation;
+    private array $_reservations;
     private array $_chambres;
 
 
@@ -41,18 +41,8 @@ public function addChambre($chambre)
 
 public function __toString()
 {
-    return $this->getNom()." ".$this->getPrenom().$this->_entree->getEntree();
+    return $this->getNom()." ".$this->getPrenom();
 }
 
-public function afficherReservationClient()
-{
-    echo "Réservations de :" .$this->getNom()." ".$this->getPrenom();
 
-    
-    foreach( $this->_reservations as $reservation)
-    {
-       
-       echo $reservation;
-    }
-}
 }
