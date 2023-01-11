@@ -77,14 +77,14 @@ public function afficherHotel()
 
 public function __toString()
 {
-    return  $this->getNom()." ".$this->getEtoiles()." ".$this->getVille()."<br>";
+    return  $this->getNom()." ".$this->getEtoiles()." ".$this->getVille();
 }
 
                                         /*AFFICHAGE INFO HOTEL ET CHAMBRE RESERVEES*/
 
 public function infoHotel()
 {
-    echo   "L'hotel " . $this->getNom() . " ".$this->getEtoiles()." ".$this->getVille()."<br>". $this->getAdresse()." ".$this->getVille()."<br>";
+    echo   "L'hotel " . $this->getNom() . " ".$this->getEtoiles()." ".$this->getVille()."<br>". $this->getAdresse()." ".$this->getVille()."<br>";    
     echo  "Nombre de Chambres : ".(count($this->_chambres))."<br>";
     echo "chambres réservées : ".count($this->_reservations)."<br>";
     echo "Chambres libres : ".(count($this->_chambres) - count($this->_reservations))."<br>";
@@ -94,7 +94,8 @@ public function infoHotel()
                                         /*AFFICHAGE DES RESERVATIOND D UN HOTEL*/
 public function afficherReservationHotel()
 {
-    echo " Réservations de l'hotel ". $this;
+    echo " Réservations de l'hotel ".$this."<br>"; 
+    echo "<span class='rectangle'>".(count($this->_reservations))." Réservations</span><br>";       
     foreach( $this->_reservations as $reservation)
     {
        echo $reservation;
