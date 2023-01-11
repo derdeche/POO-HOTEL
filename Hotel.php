@@ -104,7 +104,7 @@ public function afficherReservationHotel()
 
 }
 
-
+                                        /*AFFICHAGE des statuts des chambres d'UN HOTEL*/
  
 public function afficherStatutChambre()
 {
