@@ -61,65 +61,7 @@ echo $hotel1." / ".$chambre1->infoChambre()."du ".$reservation1->getEntree()->fo
 echo $hotel2." / ".$chambre3->infoChambre()."du ".$reservation3->getEntree()->format("d-m-y"). " "."au ".$reservation3->getSortie()->format("d-m-y"). "<br>";
 echo "********************************"."<br>";
 
-echo "Statut des chambres de ". $hotel1;
-/*$tarif = [
-    " 17" =>"120",
-    " 3" =>"100",
-    " 23"=>"130",
-    " 30"=>"140",
-    ]*/
-    
-    
-    echo afficherTableHtml($chambres);
-    function afficherTableHtml($chambres)
-     {
-
-        $result = "<table border=1>
-        
-                <thead>
-                
-                    <tr>
-                    
-                    <th>CHAMBRE</th>
-                    
-                    <th>TARIF</th>
-                    
-                    <th>WIFI</th>
-                    
-                    <th>ETAT</th>
-                    
-                    </tr>
-                    
-                    </thead>
-                    
-          </tbody>" ;
-
-         
-          
-          foreach ($chambres as $chambre){
-              
-              $result .= "<tr>
-              
-              <td>Chambre 17</td>  
-              
-              <td>120</td>
-              
-              <td><a href='https://fr.wikipedia.org/wiki/$capitale' target='_blank'>lien</td>;
-              
-              
-              </tr>";
-              
-              ksort($capitales);
-              
-            }                        
-            
-            
-            $result .= "</tbody></table>";
-            
-            return $result;
-            
-        }
-
+$hotel1->afficherinfoChambre();
 
 //$hotel2->afficherHotel();
 //echo $chambre1;
@@ -136,7 +78,3 @@ echo "Statut des chambres de ". $hotel1;
 //echo $client1;
 //echo "********************************"."<br>";
 //$reservation1->compteurReservation();
-
-?>
-</body>
-</html>
