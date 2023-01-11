@@ -25,10 +25,10 @@ $client1 = new Client('Virgile', 'GIBELLO');
 $client2 = new Client('Micka', 'MURMANN');
 
 $chambre1 = new Chambre($hotel1, 17, 120, 'Oui', 'Disponible',3);
-$chambre2 = new Chambre($hotel1, 3, 100, 'Oui', 'Résérvé',2);
+$chambre2 = new Chambre($hotel1, 3, 100, 'Non', 'Résérvé',2);
 $chambre3 = new Chambre($hotel2, 4, 120, 'Non', 'Disponible',2);
 $chambre4 = new Chambre($hotel2, 5, 110, 'Oui', 'Résérvé',4);
-$chambre5 = new Chambre($hotel1, 23, 130, 'Oui', 'Disponible',3);
+$chambre5 = new Chambre($hotel1, 23, 130, 'Non', 'Disponible',3);
 $chambre6 = new Chambre($hotel1, 30, 140, 'Oui', 'Résérvé',1);
 $chambre7 = new Chambre($hotel2, 41, 150, 'Non', 'Disponible',2);
 $chambre8 = new Chambre($hotel2, 15, 160, 'Oui', 'Résérvé',1);
@@ -61,20 +61,10 @@ echo $hotel1." / ".$chambre1->infoChambre()."du ".$reservation1->getEntree()->fo
 echo $hotel2." / ".$chambre3->infoChambre()."du ".$reservation3->getEntree()->format("d-m-y"). " "."au ".$reservation3->getSortie()->format("d-m-y"). "<br>";
 echo "********************************"."<br>";
 
-$hotel1->afficherinfoChambre();
+/*AFFICHAGE TABLEAU STATUT CHAMBRE*/
 
-//$hotel2->afficherHotel();
-//echo $chambre1;
-//$reservation1->afficherReservation();
-//echo$chambre2;
-//echo $chambre3;
-//echo "********************************"."<br>";
-//echo $reservation1;
-//echo "********************************"."<br>";
-//echo "********************************"."<br>";
-//$hotel1->afficherReservationHotel();
-//echo "********************************"."<br>";
-//echo $client1;
-//echo $client1;
-//echo "********************************"."<br>";
-//$reservation1->compteurReservation();
+$hotel1->afficherStatutChambre();
+
+?>
+</body>
+</html>
