@@ -4,8 +4,18 @@
 .rectangle
 {
 color:white;  
-Width :100 px;
-Height:50px;
+Width :10 px;
+Height:35px;
 Background-color: green;
 
 }
+
+.rectangle2
+{
+color:white;  
+Width :10 px;
+Height:35px;
+Background-color: red;
+
+}
+
