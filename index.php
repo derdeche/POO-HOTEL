@@ -24,14 +24,14 @@ $hotel2 = new hotel ('Le Régent','61 Rue Dauphine','Paris','***');
 $client1 = new Client('Virgile', 'GIBELLO');
 $client2 = new Client('Micka', 'MURMANN');
 
-$chambre1 = new Chambre($hotel1, 17, 120, 'Oui', 'Disponible',3);
-$chambre2 = new Chambre($hotel1, 3, 100, 'Non', 'Résérvé',2);
-$chambre3 = new Chambre($hotel2, 4, 120, 'Non', 'Disponible',2);
-$chambre4 = new Chambre($hotel2, 5, 110, 'Oui', 'Résérvé',4);
-$chambre5 = new Chambre($hotel1, 23, 130, 'Non', 'Disponible',3);
-$chambre6 = new Chambre($hotel1, 30, 140, 'Oui', 'Résérvé',1);
-$chambre7 = new Chambre($hotel2, 41, 150, 'Non', 'Disponible',2);
-$chambre8 = new Chambre($hotel2, 15, 160, 'Oui', 'Résérvé',1);
+$chambre1 = new Chambre($hotel1, 17, 120, 'Oui', 'Résérvée',3);
+$chambre2 = new Chambre($hotel1, 3, 100, 'Non', 'Résérvée',2);
+$chambre3 = new Chambre($hotel2, 4, 120, 'Non', 'Résérvée',2);
+$chambre4 = new Chambre($hotel2, 5, 110, 'Oui', 'Résérvée',4);
+$chambre5 = new Chambre($hotel1, 23, 130, 'Non', 'Résérvée',3);
+$chambre6 = new Chambre($hotel1, 30, 140, 'Oui', 'Résérvée',1);
+$chambre7 = new Chambre($hotel1, 41, 150, 'Non', 'Disponible',2);
+$chambre8 = new Chambre($hotel1, 15, 160, 'Oui', 'Disponible',1);
 
 
 $reservation1 = new Reservation($client1, $chambre1, '01-01-2021','03-01-2021');
