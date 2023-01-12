@@ -37,9 +37,9 @@ $chambre8 = new Chambre($hotel1, 15, 160, 'Oui', 'Disponible',1);
 $reservation1 = new Reservation($client1, $chambre1, '01-01-2021','03-01-2021');
 $reservation2 = new Reservation($client2,$chambre2, '04-01-2021','06-01-2021');
 $reservation3 = new Reservation($client1, $chambre3,  '08-04-2021','10-04-2021');
-$reservation4 = new Reservation($client2,$chambre4, '11-04-2021','15-04-2021');
-$reservation5 = new Reservation($client2, $chambre6,  '09-05-2021','16-05-2021');
-$reservation6 = new Reservation($client2,$chambre5, '25-06-2021','26-06-2021');
+$reservation4 = new Reservation($client1,$chambre4, '11-04-2021','15-04-2021');
+$reservation5 = new Reservation($client1, $chambre6,  '09-05-2021','16-05-2021');
+$reservation6 = new Reservation($client1,$chambre5, '25-06-2021','26-06-2021');
 
 
 /*AFFICHAGE INFO HOTEL*/
@@ -54,17 +54,21 @@ echo "********************************"."<br>";
 $hotel1->afficherReservationHotel();
 echo "********************************"."<br>";
 
-/*AFFICHAGE RESERVATION CLIENT*/
-echo "<h3>Réservations de ". $client1."</h3>";
+/*echo "<h3>Réservations de ". $client1."</h3>";
 echo "<span class='rectangle'> 2 Réservations</span><br>";
 echo $hotel1." / ".$chambre1->infoChambre()."du ".$reservation1->getEntree()->format("d-m-y"). " "."au ".$reservation1->getSortie()->format("d-m-y"). "<br>";
 echo $hotel2." / ".$chambre3->infoChambre()."du ".$reservation3->getEntree()->format("d-m-y"). " "."au ".$reservation3->getSortie()->format("d-m-y"). "<br>";
+echo "********************************"."<br>";*/
+
+/*AFFICHAGE RESERVATION CLIENT*/
+$client1->afficherReservationClient();
 echo "********************************"."<br>";
 
 /*AFFICHAGE TABLEAU STATUT CHAMBRE*/
-
 $hotel1->afficherStatutChambre();
 
+//$reservation1->afficherReservation();
 ?>
 </body>
 </html>
+
