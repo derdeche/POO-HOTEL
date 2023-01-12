@@ -23,7 +23,6 @@ public function __construct(string $nom, string $adresse, string $ville, string 
 public function addReservation( $reservation)
 {
     $this->_reservations[] = $reservation;
-    $this->_etat = "Résérvé";
 }
 
 public function getReservations()
@@ -108,7 +107,7 @@ public function afficherReservationHotel()
  
 public function afficherStatutChambre()
 {
-    echo "Statuts des chambres de " .$this; 
+    echo "Statuts des chambres de " .$this."<br>";  
     $result = "<table border=10>
         <thead>
             <tr>
@@ -128,10 +127,11 @@ public function afficherStatutChambre()
                 <th>".$chambre->getWifi()."</th>
                 <th>".$chambre->getEtat()."</th>
                 
+                
                 </tr>";
             }
 
-    $result .= "</tbody></table>";
+        "</tbody></table>";
     echo $result;
 
 }
