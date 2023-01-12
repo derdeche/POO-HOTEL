@@ -94,7 +94,7 @@ public function infoHotel()
                                         /*AFFICHAGE DES RESERVATIOND D UN HOTEL*/
 public function afficherReservationHotel()
 {
-    echo " Réservations de l'hotel ".$this."<br>"; 
+    echo "<h3>Réservations de l'hotel ".$this."</h3>"; 
     echo "<span class='rectangle'>".(count($this->_reservations))." Réservations</span><br>";       
     foreach( $this->_reservations as $reservation)
     {
@@ -105,35 +105,43 @@ public function afficherReservationHotel()
 
                                         /*AFFICHAGE des statuts des chambres d'UN HOTEL*/
  
+
+
 public function afficherStatutChambre()
-{
-    echo "Statuts des chambres de " .$this."<br>";  
-    $result = "<table border=10>
-        <thead>
-            <tr>
-                <th>CHAMBRE</th>
-                <th>PRIX</th>
-                <th>WIFI</th>
-                <th>ETAT</th>
-            </tr>
-            </head><tbody>";
-            
-            foreach($this->_chambres as $chambre)
-            {
-                $result .=
-                "<tr>
-                <th>".$chambre->getNumChambre()."</th>
-                <th>".$chambre->getTarif()."</th>
-                <th>".$chambre->getWifi()."</th>
-                <th>".$chambre->getEtat()."</th>
-                
-                
-                </tr>";
-            }
+    {
+        echo "<h3>Statuts des chambres de l'hotel ".$this."</h3>
+        <table border=10> 
+            <thead>   
+                <tr>
+                    <th>CHAMBRE</th>
+                    <th>PRIX</th>
+                    <th>WIFI</th>
+                    <th>ETAT</th>
+                </tr>
+            </thead>
+            <tbody> ";
+        foreach ($this->_chambres as $chambre)
+        {
+            echo "<tr>
+                    <th>".$chambre->getNumChambre()."</th>
+                    <th>".$chambre->getTarif() ."€"."</th>
+                    <th>".$chambre->getWifi()."</th>
+                    <th>";
+                        if ($chambre->getEtat() == "Disponible")
+                        {
+                            echo "<div class='rectangle'>Disponible</div>";
+                        } 
 
-        "</tbody></table>";
-    echo $result;
+                         else 
 
-}
+                        {
+                            echo "<div class='rectangle2'>Réservée</div>";
+                        }
+
+                    "</th>
+                  </tr>";
+        }
+         "</tbody></table>";
+    }
 
 }
