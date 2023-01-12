@@ -28,7 +28,7 @@ public function getPrenom()
 
 public function addReservation( $reservation)
 {
-    $this->reservations[] = $reservation;
+    $this->_reservations[] = $reservation;
 }
 
 public function addChambre($chambre)
@@ -36,7 +36,7 @@ public function addChambre($chambre)
     $this->_chambres[] = $chambre;
 }
 
-            /*Affichage info Client*/ 
+                                        /*Affichage info Client*/ 
             
 
 public function __toString()
@@ -44,5 +44,32 @@ public function __toString()
     return $this->getNom()." ".$this->getPrenom();
 }
 
+                                        /*AFFICHAGE DES RESERVATIONS D UN CLIENT*/
+
+public function afficherReservationClient()
+{
+    echo " <h3>Réservations de ".$this."</h3>"; 
+    echo "<span class='rectangle'>".(count($this->_reservations))." Réservations</span><br>";       
+    foreach( $this->_reservations as $reservation)
+{
+   echo  $reservation;
+    
+    
+}
+                                        
+}
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
