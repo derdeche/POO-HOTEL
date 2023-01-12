@@ -55,7 +55,7 @@ $hotel1->afficherReservationHotel();
 echo "********************************"."<br>";
 
 /*AFFICHAGE RESERVATION CLIENT*/
-echo "Réservations de ". $client1."<br>";
+echo "<h3>Réservations de ". $client1."</h3>";
 echo "<span class='rectangle'> 2 Réservations</span><br>";
 echo $hotel1." / ".$chambre1->infoChambre()."du ".$reservation1->getEntree()->format("d-m-y"). " "."au ".$reservation1->getSortie()->format("d-m-y"). "<br>";
 echo $hotel2." / ".$chambre3->infoChambre()."du ".$reservation3->getEntree()->format("d-m-y"). " "."au ".$reservation3->getSortie()->format("d-m-y"). "<br>";
